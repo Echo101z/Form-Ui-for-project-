@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "test-project-cdb82": {
+      "hosting": {
+        "fourth": [
+          "test-project-cdb82"
+        ]
+      }
+    }
+  }
+}

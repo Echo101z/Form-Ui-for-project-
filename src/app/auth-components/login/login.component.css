@@ -1,0 +1,26 @@
+.card.myform{
+    display: flex;
+    margin: 20px;
+    margin-top: 25px;
+    background-color: #1a4a17db;
+    color: azure;
+    border: #afe422;
+    border-radius: 2em;
+ 
+}
+
+.ins{
+    height: -webkit-fill-available;
+    overflow: auto;
+    background-image: url("../../../assets/f.jpg");
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+}
+.below{
+    background-color: black;
+}
+
+button{
+    box-shadow: 3px 2px 4px black;
+}

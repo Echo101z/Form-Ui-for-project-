@@ -1,0 +1,51 @@
+
+<div class='ims'>
+
+    <div class="ins">
+<div class="card myform" style="    border-radius: 2em;
+width: 90%;box-shadow: 5px 5px #0f3517;
+"
+
+>
+
+    <div class="myForm">
+
+        
+
+        <h1 class="card-header " style=" display: flex;
+        justify-content: center;"><u>AgriHelp</u></h1>
+       
+       <div class="up" style="display: flex; justify-content: space-around;">
+       <button  class="btn btn-success btn-lg" (click)="change()" >Signup</button>
+       <button  class="btn btn-success btn-lg" (click)="change()"
+       >Login</button>
+       </div>
+       <div class="form-group " style="    margin: auto;
+        width: 80%;padding: 10px">
+       
+       
+       <label for="email">Email</label>
+        <input class="form-control input-lg "  type="email" [(ngModel)]="user.email" id="email" placeholder="Enter Email" />
+      </div>
+      
+      <div class="form-group"  style=" margin: auto;
+      width: 80%; padding: 10px">
+        <label for="password">Password</label>
+        <input class="form-control input-lg " type="password" [(ngModel)]="user.password" placeholder="Enter Password" />
+      </div>
+      
+      <div style="    display: flex;
+      justify-content: center;     padding: 2em;">
+      <button *ngIf="signup" (click)="authsignup(user)" class="btn btn-success btn-lg"  >SignUp</button>
+      <button *ngIf="login"  (click)="authlogin(user)" class="btn btn-success btn-lg">Login</button>
+      </div>
+      <img src="./assets/icon-nav.svg" width="30" height="30" style=" height: 18em;
+      width: auto;" class="d-inline-block align-top" alt="">
+ </div>
+ </div>
+ </div>
+ </div>
+
+
+  
+  
