@@ -11,7 +11,7 @@ export class AuthService {
    
     this.auth.user.subscribe(res=>{
     //  console.log(res);
-      if(res.uid!==null){
+      if(res.uid!=null){
         this.issignin=true;
         this.router.navigateByUrl("home");
       }else{
@@ -38,7 +38,9 @@ signup(email,pass){
 
 login(email,pass){
   this.auth.signInWithEmailAndPassword(email,pass).then(res=>{
-   this.router.navigateByUrl("home");
+   this.issignin=true;
+    this.router.navigateByUrl("home");
+
   }).catch(res=>{
     alert(res.message);
     this.router.navigateByUrl("");
@@ -46,6 +48,7 @@ login(email,pass){
 }
 
 logout(){
+  this.issignin=false;
   this.auth.signOut().then(res=>{
     this.router.navigateByUrl("");
   })

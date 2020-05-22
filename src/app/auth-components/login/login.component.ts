@@ -17,9 +17,15 @@ user:{email:string,password:string}={email:"",password:""}
 
 
 
-change(){
-  this.signup=!this.signup;
-  this.login=!this.login;
+change(c){
+  if(c==='log'){
+    this.signup=false;
+    this.login=true;
+  }else{
+    this.signup=true;
+    this.login=false;
+  }
+ 
 }
 
 authsignup(user){
@@ -35,7 +41,7 @@ authsignup(user){
 authlogin(user){
   if(user.email!==""&&user.password!==""&&user.password.length>6){
     this.auth.login(user.email,user.password);
-    
+
   }else{
     alert("invalid entry : ")
   }
