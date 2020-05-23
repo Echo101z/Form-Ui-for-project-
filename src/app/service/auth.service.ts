@@ -28,7 +28,8 @@ export class AuthService {
 
 signup(email,pass){
  this.auth.createUserWithEmailAndPassword(email,pass).then(res=>{
-   this.router.navigateByUrl("home");
+  this.issignin=true; 
+  this.router.navigateByUrl("home");
    
  }).catch(data=>{
    alert("Invalid Credentials")
@@ -48,9 +49,12 @@ login(email,pass){
 }
 
 logout(){
-  this.issignin=false;
+this.issignin=false;
   this.auth.signOut().then(res=>{
+    console.log(res);
     this.router.navigateByUrl("");
+  }).catch(data=>{
+    
   })
 
 }

@@ -6,8 +6,10 @@ import { AuthGuardService } from './service/auth-guard.service';
 
 
 const routes: Routes = [
-  {path:"home",component:NavBarComponent },
-  { path:"",component:LoginComponent }
+  { path:"",component:LoginComponent},
+  {path:"home",component:NavBarComponent,canActivate:[AuthGuardService] }
+  
+  
   
 ];
 

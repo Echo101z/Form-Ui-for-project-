@@ -15,6 +15,7 @@ export class NavBarComponent implements OnInit {
   }
 
 userlogout(){
+  console.log("sdsd");
   this.auth.logout();
  
   
